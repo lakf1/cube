@@ -68,11 +68,11 @@
             font-family: 'Manrope', sans-serif;
             font-size: 3.5em;
             font-weight: 800;
-            background: linear-gradient(45deg, #00ff88, #00b3ff);
+            background: linear-gradient(45deg, #00b3ff, #0066ff);
             -webkit-background-clip: text;
             background-clip: text;
             color: transparent;
-            text-shadow: 0 0 20px rgba(0, 255, 136, 0.3);
+            text-shadow: 0 0 20px rgba(0, 179, 255, 0.3);
             letter-spacing: -0.5px;
         }
 
@@ -135,11 +135,11 @@
 
         .user-message {
             background: linear-gradient(135deg, 
-                rgba(0, 255, 136, 0.1),
-                rgba(0, 179, 255, 0.1)
+                rgba(0, 179, 255, 0.1),
+                rgba(0, 102, 255, 0.1)
             );
             margin-left: auto;
-            border: 1px solid rgba(0, 255, 136, 0.2);
+            border: 1px solid rgba(0, 179, 255, 0.2);
             color: #fff;
         }
 
@@ -180,16 +180,16 @@
 
         input[type="text"]:focus {
             outline: none;
-            border-color: rgba(0, 255, 136, 0.3);
-            box-shadow: 0 0 15px rgba(0, 255, 136, 0.1);
+            border-color: rgba(0, 179, 255, 0.3);
+            box-shadow: 0 0 15px rgba(0, 179, 255, 0.1);
         }
 
         button {
             padding: 18px 32px;
             border: none;
             border-radius: 16px;
-            background: linear-gradient(135deg, #00ff88, #00b3ff);
-            color: #000;
+            background: linear-gradient(135deg, #00b3ff, #0066ff);
+            color: #fff;
             font-weight: 600;
             cursor: pointer;
             transition: all 0.3s ease;
@@ -218,8 +218,8 @@
 
         button:hover {
             transform: translateY(-2px);
-            box-shadow: 0 0 20px rgba(0, 255, 136, 0.3),
-                        0 0 40px rgba(0, 255, 136, 0.1);
+            box-shadow: 0 0 20px rgba(0, 179, 255, 0.3),
+                        0 0 40px rgba(0, 179, 255, 0.1);
         }
 
         button:hover::before {
@@ -290,7 +290,12 @@
         }
 
         .social-link:hover {
-            color: #00ff88;
+            color: #00b3ff;
+        }
+
+        /* Optional: Add a subtle glow effect on hover */
+        .social-link:hover svg {
+            filter: drop-shadow(0 0 5px rgba(0, 179, 255, 0.5));
         }
 
         /* Footer Styles */
@@ -322,6 +327,14 @@
         .main-content {
             padding-top: 80px;
             padding-bottom: 50px;
+        }
+
+        /* Update announcement header */
+        .announcement-header {
+            background: linear-gradient(90deg, 
+                rgba(0, 179, 255, 0.1),
+                rgba(0, 102, 255, 0.1)
+            );
         }
     </style>
 </head>
