@@ -21,5 +21,17 @@
         };
     </script>
     <script src="https://mrbid.github.io/index.js"></script>
+    <script>
+        window.onload = function() {
+            // Mute all audio context
+            const audioContext = new (window.AudioContext || window.webkitAudioContext)();
+            audioContext.suspend();
+            
+            // Or if you have specific audio elements
+            document.querySelectorAll('audio, video').forEach(el => {
+                el.muted = true;
+            });
+        };
+    </script>
 </body>
 </html>
