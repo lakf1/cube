@@ -443,7 +443,7 @@
             userDiv.textContent = userMessage;
             chatContainer.appendChild(userDiv);
 
-            // Show loading indicator
+            // Show loading
             const loadingDiv = document.createElement('div');
             loadingDiv.className = 'message bot-message';
             loadingDiv.textContent = '⚡ Computing response...';
@@ -460,6 +460,10 @@
                         systemPrompt: SYSTEM_PROMPT
                     })
                 });
+
+                if (!response.ok) {
+                    throw new Error('API request failed');
+                }
 
                 const data = await response.json();
                 
